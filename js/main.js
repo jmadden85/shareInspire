@@ -1,36 +1,17 @@
-<!-- Google Analytics Content Experiment code -->
-<script>
-    function utmx_section () {
+var storiesFunction = function ($) {
 
-    };
+    var storyNav = $('.storyHole li');
+    var stories = $('.stories');
 
-    function utmx () {
+    storyNav.hover(function () {
+        var that = $(this);
+        stories.hide();
+        storyNav.removeClass('active');
+        that.addClass('active');
+        $('.' + that.attr('data-matchingStory')).show();
+    },
+    function () {
 
-    }(function () {
-        var k = '2181976-45',
-             d = document,
-             l = d.location,
-             c = d.cookie;
+    });
 
-        if ( l.search.indexOf('utm_expid='+k) > 0 ) {
-            return;
-        }
-
-        function f {
-            if ( c ) {
-                var i = c.indexOf(n+'=');
-                if ( i >- 1 ) {
-                    var j = c. indexOf(';',i);
-                    return escape(c.substring( i + n.length + 1, j < 0 ? c. length : j))
-                }
-            }
-        };
-
-        var x = f('_utmx'),
-             xx=f('_utmxx'),
-             h=l.hash;
-        d.write('<sc''ript src="''http'+(l.protocol=='https:'?'s://ssl':'://www')'.google-analytics.com/ga_exp.js?''utmxkey='k'&utmx='(x?x:'')'&utmxx='(xx?xx:'')'&utmxtime='+new Date().valueOf()(h?'&utmxhash='+escape(h.substr(1)):'')'" type="text/javascript" charset="utf-8"><\/sc'+'ript>');
-    })();
-</script>
-<script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
+}(jQuery);
