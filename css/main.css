@@ -231,6 +231,18 @@ body {
     margin:-20px 0 -12px 35px;
  }
 
+ .five a:hover {
+    color:#fff;
+    background: #e21b23; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e21b23 0%, #ad0d1c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e21b23), color-stop(100%,#ad0d1c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e21b23 0%,#ad0d1c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e21b23 0%,#ad0d1c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e21b23 0%,#ad0d1c 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e21b23 0%,#ad0d1c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e21b23', endColorstr='#ad0d1c',GradientType=0 ); /* IE6-9 */
+ }
+
  .storyHole {
     width:610px;
     height:495px;
@@ -240,6 +252,7 @@ body {
     margin:0 0 0 35px;
     font-size:16px;
     padding:30px 110px 15px 10px;
+    display:none;
  }
 
 .storyHole ul {
@@ -262,6 +275,62 @@ body {
     width:455px;
     float:right;
     display:none;
+    position:relative;
+}
+
+.firstStory {
+    display:block;
+}
+
+.groupBg {
+    background:url('../img/storiesGroup.png') 0 0 no-repeat transparent;
+    width:892px;
+    height:555px;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.storyLady {
+    background-image:url('../img/storiesInd.png');
+    background-repeat:no-repeat;
+    width:286px;
+    height:375px;
+    position:absolute;
+    top:40px;
+    right:-305px;
+}
+
+.secondStory .storyLady {
+    background-position:0 -540px;
+}
+
+.thirdStory .storyLady {
+    background-position:0 -1070px;
+}
+
+.fourthStory .storyLady {
+    background-position:0 -1640px;
+}
+
+.fifthStory .storyLady {
+    background-position:0 -2240px;
+}
+
+.sixthStory .storyLady {
+    background-position:0 -2830px;
+}
+
+.showStories .icon-chevron-down {
+    display:none;
+}
+
+.showStories.on .icon-chevron-right {
+    display:none;
+}
+
+.showStories.on .icon-chevron-down {
+    display:inline;
 }
 
  .storyHole p {
@@ -269,4 +338,8 @@ body {
     width:435px;
     margin:0 0 15px 0;
     padding:0;
+ }
+
+ .storyHole ul li {
+    font-weight:bold;
  }
